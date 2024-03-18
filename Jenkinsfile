@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-  label 'java'     // running pipeline on worker node
-}
+    agent any
 
     stages {
         stage('check out from SCM') {
