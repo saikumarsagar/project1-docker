@@ -30,21 +30,17 @@ pipeline {
      stage('Running Docker container') {
             steps {
                 
-              sh 'sudo docker run -dt -p 8090:8080 --name=javacal saidocker2048/project:1.0'
+              sh 'sudo docker run -dt -p 8098:8080 --name=javacal2 saidocker2048/project:4.0'
             }
         }   
      stage('Pushing Image to docker hub') {
             steps {
-            withCredentials([string(credentialsId: '6636d3c5-1154-4ac0-8d3d-5f5649a671b7', variable: 'dockerpwd')])
+            withCredentials([string(credentialsId: '6636d3c5-1154-4ac0-8d3d-5f5649a671b7', variable: 'docker')])
            // {
-           // sh "sudo docker login -u saidocker2048 -p ${dockerpwd}"
-           // sh 'sudo docker push saidocker2048/project:4.0'
+           sh "sudo docker login -u saidocker2048 -p ${docker}"
+           sh 'sudo docker push saidocker2048/project:4.0'
           //  }
 
-             withCredentials([usernameColonPassword(credentialsId: 'docker', variable: 'docker')]) {
-             sh "sudo docker login -u saidocker2048 -p ${docker}"
-             sh 'sudo docker push saidocker2048/project:4.0'
-               }  
             }
         }  
         
