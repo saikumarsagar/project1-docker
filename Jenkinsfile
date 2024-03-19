@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label agent
+    }
 
     stages {
         stage('check out from SCM') {
