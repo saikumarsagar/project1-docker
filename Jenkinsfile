@@ -32,6 +32,13 @@ pipeline {
                 
               sh 'sudo docker run -dt -p 8098:8080 --name=javacal2 saidocker2048/project:4.0'
             }
+        }  
+
+             stage('testing') {
+            steps {
+                
+              sh echo 'test'
+            }
         }   
      stage('Pushing Image to docker hub') {
             steps {
