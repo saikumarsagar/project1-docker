@@ -2,6 +2,6 @@ package org.foo
 
 class ExampleClass {
     static void sayHello(String name) {
-        println "Hello, ${name}"
+        println "Hi, ${name} , what a sudden suppai"
     }
 }
