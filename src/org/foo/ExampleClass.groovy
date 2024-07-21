@@ -1,8 +1,7 @@
-
 package org.foo
 
-class sample {
+class ExampleClass {
     static void sayHello(String name) {
-        println "Hi, ${name}"
+        println "Hello, ${name}"
     }
 }
