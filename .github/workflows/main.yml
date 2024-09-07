@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-package               # Name for the uploaded artifact
-          path: target/*.jar               # Path to the packaged JAR file (change to .war if it's a WAR file)
+          path: target/*.war               # Path to the packaged JAR file (change to .war if it's a WAR file)
       
       # Step 7: Upload test results (optional). You can upload test reports for later review.
       - name: Upload test results
