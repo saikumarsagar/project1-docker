@@ -39,6 +39,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       # Step 4: Build and package the Java project using Maven
+      #test
       - name: Build and package the project
         run: mvn package -DskipTests=false
 
