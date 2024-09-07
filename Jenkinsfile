@@ -39,7 +39,7 @@ pipeline {
            // {
            sh "sudo docker login -u saidocker2048 -p ${docker}"
            sh 'sudo docker push saidocker2048/project:4.0'
-          //  }
+          // // // }
 
             }
         }  
