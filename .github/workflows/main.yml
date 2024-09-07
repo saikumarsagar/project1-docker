@@ -9,6 +9,7 @@ on:
   pull_request:
     branches:
       - main   # Run on every pull request to the 'main' branch
+  workflow_dispatch:  # Enables manual trigger of the workflow      
 
 # Defines all the jobs for the workflow.
 jobs:
